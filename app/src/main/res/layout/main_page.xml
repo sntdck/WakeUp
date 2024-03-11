@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/ScreenBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginEnd="20dp">
+
+
+                <ImageButton
+                    android:id="@+id/changeBG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/ImageButtonChangeMode"
+                    app:srcCompat="@drawable/dark_theme"
+                    android:background="@drawable/light_bg_icons"
+                    android:contentDescription="changeBG"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="30dp">
+
+
+                    <ImageButton
+                        android:id="@+id/editHost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/icon_add_black"
+                        android:contentDescription="editHost"
+                        android:background="@drawable/light_bg_icons"
+                        style="@style/ImageButtonAdd"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="45sp"
+                    android:typeface="monospace"
+                    style="@style/TextColor"
+                    android:text="Connections"
+                    android:fontFamily="@font/gilroy"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hidetextmain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This list is empty"
+                android:textSize="30sp"
+                android:gravity="center"
+                style="@style/TextColor"
+                android:fontFamily="@font/gilroy"
+                android:layout_marginTop="280dp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextColor"
+                android:text="Click the edit button in the right top"
+                android:textSize="30sp"
+                android:fontFamily="@font/gilroy"
+                android:gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
